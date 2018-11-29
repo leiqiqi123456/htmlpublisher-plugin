@@ -264,14 +264,6 @@ public class HtmlPublisherTarget extends AbstractDescribableImpl<HtmlPublisherTa
             return dir().exists() ? "graph.gif" : null;
         }
 
-        public String getBackToName() {
-            return project.getDisplayName();
-        }
-
-        public String getBackToUrl() {
-            return project.getUrl();
-        }
-
         public boolean shouldLinkToLastBuild() {
             return actualHtmlPublisherTarget.getAlwaysLinkToLastBuild();
         }
@@ -426,16 +418,6 @@ public class HtmlPublisherTarget extends AbstractDescribableImpl<HtmlPublisherTa
         @Override
         protected String getTitle() {
             return this.build.getDisplayName() + " html3";
-        }
-
-        @Override
-        public String getBackToName() {
-            return build.getDisplayName();
-        }
-
-        @Override
-        public String getBackToUrl() {
-            return build.getUrl();
         }
 
         @Override
